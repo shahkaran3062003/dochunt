@@ -1,5 +1,5 @@
 {% load static %}
-
+{% static 'media' as baseimgurl %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/favi6.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -31,124 +31,282 @@
   <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/intro.js/themes/introjs-modern.css">
+  <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+  <script src="{% static 'js/intro.js' %}"></script>
 
-  <!-- Template Main CSS File -->
+
+
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Selecao - v2.3.1
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
+
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light">Doc<span style="color: red;" ;>Hunt</span></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1 class="text-light" style="font-size: 18;">Doc<span style="color: red;" ;>Hunt</span></h1>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <!-- <li><a href="#about">About</a></li> -->
+          <li class="active"><a href="#">Home</a></li>
 
           {% if user.is_authenticated %}
 
-
-          <li class="drop-down"><a href="">Drop Down</a>
+          <li class="drop-down" id="one"> <a href="#">All Material</a>
+            {% if pass == 'MB' %}
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
+              <li class="drop-down"><a href="">Books</a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li class="drop-down"><a href="#">Drop Down 3</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li class="drop-down"><a href="#">Deep Drop Down 5</a>
-                    <ul>
-                      <li><a href="#">Deep Drop Down 1</a></li>
-                      <li><a href="#">Deep Drop Down 2</a></li>
-                      <li><a href="#">Deep Drop Down 3</a></li>
-                      <li><a href="#">Deep Drop Down 4</a></li>
-                      <li><a href="#">Deep Drop Down 5</a></li>
-                    </ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SJu0RB1wIsjykmiPZGRKvyHyGWnd2JUB?usp=sharing">Biology</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SHyesLYlSJyz7pyoBMfqIybevtepUAHK?usp=sharing">Chemistry</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SKfLB3YUmt6g0m5_CgbkHLk7iArmP6RY?usp=sharing">English</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1RypbWzq09DDOHeV8pt7Qu5Q2G5uBwnEi?usp=sharing">Maths</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1S3BAKjQZAwP69XBKIBCzh-3txrNih8Yp?usp=sharing">Physics</a>
                   </li>
                 </ul>
               </li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+
+              <li class="drop-down"><a href="#">Practical</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SsYvRKrBBRs0BKTjwzAdIfLraywrAo-E?usp=sharing">Biology</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1T1sl7L-xDx_QswufwmMOBOBfdd5AMUmN?usp=sharing">Chemistry</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1T5iBVt0G2pGl4i4J6Np99PsG8IDBi2T4?usp=sharing">English</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SeKYq_FytnTLUR_KCfH0-XEPdKqNr5s8?usp=sharing">Maths</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1T-WyxXJT4b7in6QAFEwRCATptz3ls0uZ?usp=sharing">Physics</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="drop-down"><a href="#">Assignments</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1RfAMVQ-gcD5hgOi_yqJ1hD5JL_yHiwU5?usp=sharing">Biology</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1RNeHsu5Rbc2gBYqscE4PTwiDGdkoyS9w?usp=sharing">Chemistry</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1RvlLgGB2oBRtI53sXkqXJrVap7K65Oyd?usp=sharing">English</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1RKeaDtfVqPhr4KAIJT__DHEKWAVfQfTf?usp=sharing">Maths</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1RMbd5Jb_HevF8C8WwCgMznFhs5ZaH0Vp?usp=sharing">Physics</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="drop-down"><a href="#">Old Question Papers</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SWpxfjn_64f8sRtXbYErHfjwXHygSOn1?usp=sharing">Biology</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1S_tTAGSR95mKd-MmnYItnuhTCEiKHmo8?usp=sharing">Chemistry</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SPGL_FYEWyfwPPrFuL1gBQiue_dE40eB?usp=sharing">Maths</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1SdA4u8t3aQlNK8lyxFUlTNCgMFo1Rpls?usp=sharing">Physics</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="drop-down"><a href="#">Other Material</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1TIv2TG3XA-yGjoyu7R4Saspp5_JIkByU?usp=sharing">Biology</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1TUaRVFA5BXbG88gUJhx_IYJCU1AjrpPd?usp=sharing">Chemistry</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1TZb6-5EBu4ZOtyYJilyovXrcEgeeDrkR?usp=sharing">English</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1TAoszFhzMEEV7qeXbwulZ2tW8DNpL02C?usp=sharing">Maths</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1TI_Ytw2uBYYuZZGzPjLXcxKp2QswXvfN?usp=sharing">Physics</a>
+                  </li>
+                </ul>
+              </li>
+
             </ul>
+            {% elif pass == 'DN' %}
+            <ul>
+              <li class="drop-down"><a href="">Daily
+                  work</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1_VVAkCmcFijr3tEPhrdmsCzRragLb-3T?usp=sharing">Advanced
+                      C Theory</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1JVPvTgsnxg5IfUhrsZdKr5MXutZ8X58s?usp=sharing">Advanced
+                      C Practical</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1-SObpxXT13s37Zldgcuwa-VMNTCfXICf?usp=sharing">Web
+                      Application Dev Theory</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1PgdaN6k7qTTwkdAckIx_zEm79v5NMIwh?usp=sharing">Web
+                      Application Dev Practical</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1tZeUyQzqq-t0rQfVXxvKoBpMIhRRM61b?usp=sharing">Database
+                      Management Theory</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1L3-WpTKDxKgdEI35hjJy0-0CaijOu0Ia?usp=sharing">Database
+                      Management Practical</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1YeT3n-14ckGYf75CteZvK8J3PRLoYJus?usp=sharing">Mathematics</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1WVQ4RHYmD9DgigFAgyy2FGrpdGvnjPyq?usp=sharing">English</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="drop-down"><a href="#">Assignments</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1ixTbODlQoFWasvDsI8EefU3cyUKd5hkU?usp=sharing">Advanced
+                      C</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1N_W3oH6vXsjDQzBCW9iOird3xpdLrYtO?usp=sharing">Web
+                      Application Dev</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1UnjBLq5hFgHgUZc1Pg4xAvt1yGj0ZM8d?usp=sharing">Database
+                      Management</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1yqnUZ5LygpYOzSoWxJWM_HdiWkSBWkXn?usp=sharing">Mathematics</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1zFBU9UlivXU7XDQqWn6nK0-eFj7raQ49?usp=sharing">English</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="drop-down"><a href="#">Tutorial book</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1pxyJFtEz0z4YK_-wDIRNpimIkJ6eG-Yi?usp=sharing">Advanced
+                      C</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/13ojcnqtwMJ3bvi_s19wn6m7vvUI_UVCN?usp=sharing">Web
+                      Applications Dev</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1JmY3EsjOO60clho90iW0lYQkwE8_CbBH?usp=sharing">Database
+                      Management</a></li>
+                </ul>
+              </li>
+
+              <li class="drop-down"><a href="#">Syllabus</a>
+                <ul>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1HddwdsduSmN7h6Gf4S7yFn1GMG8R3i39?usp=sharing">Advanced
+                      C Theory</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1dgHNZL3iBuxOKCT2WHGkP8XaTTuGGBbm?usp=sharing">Advanced
+                      C Practical</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1kVW0ce8WeGhipRmKm73rK2haGNYVpbZK?usp=sharing">Web
+                      Application Dev Theory</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/1JdKWvwL_zAt3jHWzgjdOw7_ut0cK-Hei?usp=sharing">Web
+                      Application Practical</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1u6zSzmZoQhKqZE2olDsYl--5np74FWIf?usp=sharing">Database
+                      Management Theory</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1xziSlVJxjbGXqSxZa7d_IjYZmMet1aPB?usp=sharing">Database
+                      Management Practical</a></li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1dZw9O2Wj4wpNk2SftvktFwgIqVHZFAtB?usp=sharing">Mathematics</a>
+                  </li>
+                  <li><a
+                      href="https://drive.google.com/drive/folders/1EbecML-HNTpGie34DL8C2ZF2Z1tVViw6?usp=sharing">English</a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+
+            {% endif %}
+            {% endif %}
           </li>
-          {% endif %}
+
+
 
           <li><a href="#portfolio">Update</a></li>
           <li><a href="#contact">Contact</a></li>
 
 
           {% if user.is_authenticated %}
+          <li><a href="#" onclick="intro()">Guide</a></li>
           <li><a href="user/logout">Log Out</a></li>
 
           {% else %}
           <li><a href="user/login">Sign In</a></li>
-          <li><a href="user/register">Register</a></li>
+          <li><a href="user/register">Sign Up</a></li>
           {% endif %}
 
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
+
+
 
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
 
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
-      <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Doc<span style="color: red;"
-                ;>Hunt</span></span>!!! {{ user.username}} </h2>
-          <p class="animate__animated fanimate__adeInUp">
-            lsadjflkmslkcszxofikdskkjdsfuidanl
+                ;>Hunt</span></span>!!! <br> {{ user.username}} </h2>
+          <p class="animate__animated fanimate__fadeInUp">
+            First Login then we provide you all college regarding documents!!</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Doc<span style="color: red;"
+                ;>Hunt</span></span>!!! <br> {{ user.username}} </h2>
+          <p class="animate__animated animate__fadeInUp">Here we providing some updates so you stay up to date!!
           </p>
         </div>
       </div>
 
-      <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Doc<span style="color: red;"
-                ;>Hunt</span></span>!!! {{ user.username}} </h2>
-          <p class="animate__animated animate__fadeInUp">kdsaioljdl;cmncvjkdkjioeieiodnmnmndkafiosjdklkioaiofjfsdklfkl
+                ;>Hunt</span></span>!!! <br> {{ user.username}}</h2>
+          <p class="animate__animated animate__fadeInUp">You will have all the things in your hands at anytime from
+            anyplace!!
           </p>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Doc<span style="color: red;"
-                ;>Hunt</span></span>!!! {{ user.username}} </h2>
-          <p class="animate__animated animate__fadeInUp">kfdaslfjkieikdsjklmcv dksajfksjdfioejfdskam.</p>
         </div>
       </div>
 
@@ -180,193 +338,122 @@
       </g>
     </svg>
 
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
 
-    <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
+      <div class="container" id="two">
 
         <div class="section-title" data-aos="zoom-out">
           <h2>Updates</h2>
-          <p>What is latest</p>
+          <p>What is latest
+          </p>
         </div>
 
-        <!-- <ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
-        </ul> -->
 
         <div class="row portfolio-container" data-aos="fade-up">
+          {% for d in data %}
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src=" {% static 'img/features-1.png' %}" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="{{d.img.url}}" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="{% static 'img1/didi.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link"
-                title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <h4>{{d.title}}</h4>
+              <a href="{{d.img.url}}" data-gall="portfolioGallery" class="venobox preview-link" title="{{d.title}}"><i
+                  class="bx bx-plus"></i></a>
+              <a href="{% url 'update_home' %}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="{% static 'img/didi2.jpg' %}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="{% static 'img/didi2.jpg' %}" data-gall="portfolioGallery" class="venobox preview-link"
-                title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link"
-                title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link"
-                title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link"
-                title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link"
-                title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link"
-                title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link"
-                title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link"
-                title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+          {% endfor %}
 
         </div>
-
       </div>
     </section>
-    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
-
+      <div class="container" id="three">
+        {% if pass == 'DN' %}
         <div class="section-title" data-aos="zoom-out">
-          <h2>Contact</h2>
+          <h2>Contact : Karan Shah</h2>
           <p>Contact Us</p>
         </div>
 
         <div class="row mt-5">
-
           <div class="col-lg-4" data-aos="fade-right">
             <div class="info">
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Location:</h4>
-                <!-- <p>A108 Adam Street, New York, NY 535022</p> -->
+                <p>A207, Balaji Darshan, Vadodara.</p>
               </div>
 
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <!-- <p>info@example.com</p> -->
+                <p>shahkaran3062003@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
-                <!-- <p>+1 5589 55488 55s</p> -->
+                <p>+91 7043203802</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% elif pass == 'MB' %}
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Contact : Dhrumil Shah</h2>
+          <p>Contact Us</p>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="info">
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>dhrumil2369@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9574014702</p>
               </div>
 
             </div>
-
           </div>
-
-
         </div>
-
+        {% endif %}
       </div>
-    </section><!-- End Contact Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <h3>Doc<span style="color: red;" ;>Hunt</span></h3>
-      <p>Akhil Bharatiya Vidyarthi Parishad .</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <p>{{sentense}}.</p>
+      <div class="social-links" id="four">
+        <a href="https://www.facebook.com/profile.php?id=100052306210721" class="facebook"><i
+            class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/karan_127.0.0.1/" class="instagram"><i class="bx bxl-instagram"></i></a>
       </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>KARAN</span></strong>. All Rights Reserved
+      <div class="copyright" id="four">
+        &copy; Copyright <strong><span> <a href="https://resume-karan.netlify.app/"> KARAN</a></span></strong>. All
+        Rights Reserved
       </div>
+      <div class="credits">
+
+        Designed by <a href="https://resume-karan.netlify.app/">Karan</a>
+
+      </div>
+
     </div>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
@@ -380,6 +467,12 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+
+  {% if intor %}
+  <script>
+    intro();
+  </script>
+  {% endif %}
 
 </body>
 

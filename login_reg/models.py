@@ -4,7 +4,8 @@ from django.contrib.auth.models import User, auth
 
 
 class collage(models.Model):
-    user_id = models.AutoField(primary_key=True)
+    u_id = models.AutoField(primary_key=True)
+    # user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
     user_name = models.ForeignKey(
         User, on_delete=models.CASCADE, db_column="username")
     coll_type = models.CharField(max_length=7, default="")

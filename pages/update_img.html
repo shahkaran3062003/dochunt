@@ -11,16 +11,13 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/favi6.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
@@ -31,124 +28,99 @@
   <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
   <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Selecao - v2.3.1
-  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html">ABVP</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1 class="text-light">DOC<span style="color: red;" ;>Hunt</span></h1>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="{% url 'home' %}">Home</a></li>
 
         </ul>
-      </nav><!-- .nav-menu -->
+      </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
           <h2>Updates</h2>
-          <!-- <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfolio Details</li>
-          </ol> -->
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
 
-    <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+      <div class="owl-carousel portfolio-details-carousel">
 
-        <div class="portfolio-details-container" data-aos="fade-up">
+        {% for d in data %}
 
-          <div class="owl-carousel portfolio-details-carousel">
-            <img src="{% static 'img/features-1.png' %}" class="img-fluid" alt="">
-            <!-- <img src="assets/img/portfolio/portfolio-details-2.jpg" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt=""> -->
+        <div class="container">
+
+          <div class="portfolio-details-container" data-aos="fade-up">
+            <img src="{{d.img.url}}" class="img-fluid" alt="">
+            <div class="portfolio-description">
+              <h1>{{d.title}}</h1>
+              <p>
+              <h3 style="color: black;">{{d.des}}
+
+              </h3>
+              </p>
+            </div>
           </div>
-
-
         </div>
+        {% endfor %}
 
-        <div class="portfolio-description">
-          <h2>This is a title.</h2>
-          <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia.
-            Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia
-            accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-          </p>
+
+      </div>
+    </section>
+
+
+    <footer id="footer">
+      <div class="container">
+        <h3>DOC<span style="color: red;" ;>Hunt</span></h3>
+        <p>{{sent_pass}}
+        </p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=100052306210721" class="facebook"><i
+              class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/karan_127.0.0.1/" class="instagram"><i class="bx bxl-instagram"></i></a>
         </div>
-
+        <div class="copyright">
+          &copy; Copyright <strong><span> <a href="https://resume-karan.netlify.app/"> Karan</a></span></strong>. All
+          Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://resume-karan.netlify.app/">Karan</a>
+        </div>
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </footer>
 
-  </main><!-- End #main -->
+    <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>ABVP</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>Selecao</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/selecao-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    <script src=" {% static 'vendor/jquery/jquery.min.js' %} "></script>
+    <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src=" {% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src=" {% static 'vendor/php-email-form/validate.js' %} "></script>
+    <script src=" {% static 'vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
+    <script src=" {% static 'vendor/venobox/venobox.min.js' %} "></script>
+    <script src=" {% static 'vendor/owl.carousel/owl.carousel.min.js' %} "></script>
+    <script src=" {% static 'vendor/aos/aos.js' %} "></script>
 
-  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src=" {% static 'vendor/jquery/jquery.min.js' %} "></script>
-  <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src=" {% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
-  <script src=" {% static 'vendor/php-email-form/validate.js' %} "></script>
-  <script src=" {% static 'vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
-  <script src=" {% static 'vendor/venobox/venobox.min.js' %} "></script>
-  <script src=" {% static 'vendor/owl.carousel/owl.carousel.min.js' %} "></script>
-  <script src=" {% static 'vendor/aos/aos.js' %} "></script>
-
-  <!-- Template Main JS File -->
-  <script src=" {% static 'js/main.js' %} "></script>
+    <script src=" {% static 'js/main.js' %} "></script>
 
 </body>
 
